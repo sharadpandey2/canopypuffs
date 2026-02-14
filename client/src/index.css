@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #000000;
+    color: #e5e7eb;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll bars */
+    
+    /* Hide default cursor on desktop to use our Custom Glowing Orb */
+    @media (min-width: 768px) {
+      cursor: none;
+    }
+  }
+
+  /* Force all Headings to use the "Tech" font */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+/* --- 2. CUSTOM SCROLLBAR (Chrome/Edge/Safari) --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22d3ee; /* Cyan-400 */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4; /* Cyan-500 */
+}
+
+/* --- 3. UTILITIES & EFFECTS --- */
+@layer utilities {
+  
+  /* The Cinematic Grain Overlay */
+  .bg-noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    
+    /* CHANGED: Z-Index set to 0 so it sits BEHIND your main content (z-10) */
+    z-index: -1 !important; /* <--- Added semicolon */
+    
+    opacity: 0.05; 
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  /* High-End Text Selection */
+  ::selection {
+    background-color: rgba(34, 211, 238, 0.2);
+    color: #22d3ee;
+  }
+}
+
+/* --- 4. ANIMATIONS --- */
+
+/* Rotating Gradient Border */
+@keyframes gradient-xy {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-xy {
+  background-size: 200% 200%;
+  animation: gradient-xy 6s ease infinite;
+}
