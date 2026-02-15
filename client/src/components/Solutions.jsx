@@ -142,7 +142,7 @@ export default function Solutions() {
               "Selective Spraying",
               "All-Terrain Nav",
               "Plant-by-Plant Analysis",
-              "Zero-Waste Protocol"
+              "Zero-Waste Protocol "
             ]}
           />
 
