@@ -1,21 +1,19 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAuth } from "firebase/auth"; // <--- 1. NEW: Import Auth SDK
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD7bsRLEe1NnDT2qPRHFHzO5D6hswzLG8A",
-  authDomain: "canopypuffs-5966d.firebaseapp.com",
-  projectId: "canopypuffs-5966d",
-  storageBucket: "canopypuffs-5966d.firebasestorage.app",
-  messagingSenderId: "332013858476",
-  appId: "1:332013858476:web:80a411343e39fe8a7c3909"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Initialize & Export Database
+// Initialize & Export Services
 export const db = getFirestore(app);
-
-// Initialize & Export Authentication
-export const auth = getAuth(app); // <--- 2. NEW: Export Auth for Dashboard
+export const auth = getAuth(app);
