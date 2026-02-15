@@ -79,7 +79,7 @@ const ShowroomCard = ({ title, subtitle, icon: Icon, features, index, image }) =
 
         {/* Footer Action */}
         <div className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
-          <span className="text-[9px] uppercase tracking-widest text-white opacity-60 group-hover:opacity-100 transition-opacity">Details</span>
+          <span className="text-[9px] uppercase tracking-widest text-white opacity-60 group-hover:opacity-100 transition-opacity">Launching Soon</span>
           <button className="w-8 h-8 flex items-center justify-center border border-white/20 rounded-full group-hover:bg-white group-hover:text-black transition-all duration-500 bg-black/50">
             <ArrowRight className="w-3 h-3 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
           </button>

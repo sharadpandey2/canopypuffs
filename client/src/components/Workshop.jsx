@@ -84,16 +84,16 @@ const WorkshopModal = ({ isOpen, onClose }) => {
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-4">
-                    <input required type="text" placeholder="Coordinator Name" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} className="w-full border-b border-gray-300 py-3 text-sm focus:border-black focus:outline-none transition-colors placeholder:text-gray-400" />
+                    <input required type="text" placeholder="Name" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} className="w-full border-b border-gray-300 py-3 text-sm focus:border-black focus:outline-none transition-colors placeholder:text-gray-400" />
                     
                     <div className="grid grid-cols-2 gap-6">
                       <input required type="email" placeholder="Email Address" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} className="w-full border-b border-gray-300 py-3 text-sm focus:border-black focus:outline-none transition-colors placeholder:text-gray-400" />
                       <input required type="tel" placeholder="Phone Number" value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} className="w-full border-b border-gray-300 py-3 text-sm focus:border-black focus:outline-none transition-colors placeholder:text-gray-400" />
                     </div>
 
-                    <input required type="text" placeholder="Institution / City" value={formData.city} onChange={(e) => setFormData({...formData, city: e.target.value})} className="w-full border-b border-gray-300 py-3 text-sm focus:border-black focus:outline-none transition-colors placeholder:text-gray-400" />
+                    <input required type="text" placeholder="Institution Name" value={formData.city} onChange={(e) => setFormData({...formData, city: e.target.value})} className="w-full border-b border-gray-300 py-3 text-sm focus:border-black focus:outline-none transition-colors placeholder:text-gray-400" />
                     
-                    <textarea required rows={2} placeholder="Objective (e.g. STEM Week)" value={formData.purpose} onChange={(e) => setFormData({...formData, purpose: e.target.value})} className="w-full border-b border-gray-300 py-3 text-sm focus:border-black focus:outline-none transition-colors placeholder:text-gray-400 resize-none" />
+                    <textarea required rows={2} placeholder="Institute Address" value={formData.purpose} onChange={(e) => setFormData({...formData, purpose: e.target.value})} className="w-full border-b border-gray-300 py-3 text-sm focus:border-black focus:outline-none transition-colors placeholder:text-gray-400 resize-none" />
                   </div>
 
                   <button disabled={isSubmitting} type="submit" className="w-full py-4 bg-black text-white text-xs font-bold uppercase tracking-[0.2em] hover:bg-gray-800 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 mt-4">
@@ -176,7 +176,7 @@ export default function Workshop() {
                 { label: "Capacity", value: "30 - 100 Students" },
                 { label: "Duration", value: "6 - 12 Hours" },
                 { label: "Grades", value: "Class 6 - 12" },
-                { label: "Equipment", value: "Provided by Canopy Puffs" }
+                { label: "Training", value: "Provided by Canopy Puffs" }
               ].map((item, idx) => (
                 <div key={idx} className="flex justify-between py-4 border-b border-white/10 hover:bg-white/5 transition-colors px-2">
                   <span className="text-xs uppercase tracking-widest text-gray-500">{item.label}</span>
