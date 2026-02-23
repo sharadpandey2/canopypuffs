@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+"use client"; 
 import { useState, useRef, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { 
