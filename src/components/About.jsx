@@ -119,7 +119,7 @@ const teamData = [
     name: "Ayush Kumar Singh",
     role: "Co-Founder",
     linkedinUrl: "https://www.linkedin.com/in/ayush-kumar-singh-46838931b/",
-    imageSrc: "/ayush.jpg"
+    imageSrc: "/Ayush.jpg"
   },
   {
     name: "Sumanyu Singh",
