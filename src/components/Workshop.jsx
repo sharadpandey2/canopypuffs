@@ -60,7 +60,7 @@ export default function Workshop() {
             <div className="border-t border-white/10 mb-12">
               {[
                 { label: "Capacity", value: "30 - 100 Students" },
-                { label: "Duration", value: "6 - 12 Hours" },
+                { label: "Duration", value: "3 - 8 Hours" },
                 { label: "Grades", value: "Class 6 - 12" },
                 { label: "Training", value: "Provided by Canopy Puffs" }
               ].map((item, idx) => (
